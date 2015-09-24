@@ -1,0 +1,30 @@
+{
+	"color_scheme": "Packages/User/SublimeLinter/Twilight (SL).tmTheme",
+	"font_size": 11,
+	"ignored_packages":
+	[
+		"Markdown",
+		"Vintage"
+	],
+	"paths":
+	{
+		"linux":
+		[
+			"/home/robin/.cabal/bin/"
+		],
+		"osx":
+		[
+		],
+		"windows":
+		[
+		]
+	},
+	"pyint_path": "/usr/local/bin/pylint",
+	"rulers":
+	[
+		80
+	],
+	"run_on_save": true,
+	"show_panel_on_build": false,
+	"translate_tabs_to_spaces": true
+}

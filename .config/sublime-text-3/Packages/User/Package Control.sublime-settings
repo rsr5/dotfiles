@@ -1,0 +1,31 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"All Autocomplete",
+		"ApplySyntax",
+		"GitGutter",
+		"Javatar",
+		"Markdown Preview",
+		"MarkdownEditing",
+		"Package Control",
+		"Pretty JSON",
+		"Pretty YAML",
+		"Revert All Files",
+		"RuboCop",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-flake8",
+		"SublimeLinter-shellcheck",
+		"Theme - Soda SolarizedDark",
+		"Tomorrow Color Schemes"
+	],
+	"repositories":
+	[
+		"https://github.com/theymaybecoders/sublime-tomorrow-theme.git"
+	]
+}
