@@ -18,6 +18,7 @@ import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Layout.IM
 import XMonad.Layout.Grid
+import XMonad.Actions.CycleWS
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
@@ -260,6 +261,16 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- Restart xmonad.
   , ((modMask, xK_q),
      restart "xmonad" True)
+
+   , ((modMask,               xK_Down),  nextWS)
+   , ((modMask,               xK_Up),    prevWS)
+   , ((modMask .|. shiftMask, xK_Down),  shiftToNext)
+   , ((modMask .|. shiftMask, xK_Up),    shiftToPrev)
+   , ((modMask,               xK_Right), nextScreen)
+   , ((modMask,               xK_Left),  prevScreen)
+   , ((modMask .|. shiftMask, xK_Right), shiftNextScreen)
+   , ((modMask .|. shiftMask, xK_Left),  shiftPrevScreen)
+   , ((modMask,               xK_z),     toggleWS)
   ]
   ++
 
