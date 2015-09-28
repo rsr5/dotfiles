@@ -262,15 +262,25 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_q),
      restart "xmonad" True)
 
-   , ((modMask,               xK_Down),  nextWS)
-   , ((modMask,               xK_Up),    prevWS)
-   , ((modMask .|. shiftMask, xK_Down),  shiftToNext)
-   , ((modMask .|. shiftMask, xK_Up),    shiftToPrev)
-   , ((modMask,               xK_Right), nextScreen)
-   , ((modMask,               xK_Left),  prevScreen)
-   , ((modMask .|. shiftMask, xK_Right), shiftNextScreen)
-   , ((modMask .|. shiftMask, xK_Left),  shiftPrevScreen)
-   , ((modMask,               xK_z),     toggleWS)
+  -- Workspace navigation
+  , ((modMask,               xK_Right),
+     nextWS)
+  , ((modMask,               xK_Left),
+     prevWS)
+  , ((modMask .|. shiftMask, xK_Down),
+     shiftToNext)
+  , ((modMask .|. shiftMask, xK_Up),
+     shiftToPrev)
+  , ((modMask,               xK_Right),
+     nextScreen)
+  , ((modMask,               xK_Left),
+     prevScreen)
+  , ((modMask .|. shiftMask, xK_Right),
+     shiftNextScreen)
+  , ((modMask .|. shiftMask, xK_Left),
+     shiftPrevScreen)
+  , ((modMask,               xK_z),
+     toggleWS)
   ]
   ++
 
