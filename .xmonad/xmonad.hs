@@ -267,20 +267,6 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
      nextWS)
   , ((modMask,               xK_Left),
      prevWS)
-  , ((modMask .|. shiftMask, xK_Down),
-     shiftToNext)
-  , ((modMask .|. shiftMask, xK_Up),
-     shiftToPrev)
-  , ((modMask,               xK_Right),
-     nextScreen)
-  , ((modMask,               xK_Left),
-     prevScreen)
-  , ((modMask .|. shiftMask, xK_Right),
-     shiftNextScreen)
-  , ((modMask .|. shiftMask, xK_Left),
-     shiftPrevScreen)
-  , ((modMask,               xK_z),
-     toggleWS)
   ]
   ++
 
