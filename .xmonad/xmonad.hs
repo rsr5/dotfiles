@@ -19,7 +19,6 @@ import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Layout.IM
 import XMonad.Layout.Grid
 import XMonad.Actions.CycleWS
-import XMonad.Actions.Volume
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
@@ -269,12 +268,6 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
      nextWS)
   , ((modMask,               xK_Left),
      prevWS)
-  , ((modMask x, xK_Down ),
-     lowerVolume 3 >> return ())
-  , ((modMask x, xK_Up ),
-     raiseVolume 3 >> return ())
-  , ((modMask x, xK_m),
-     toggleMute    >> return ())
   ]
   ++
 
