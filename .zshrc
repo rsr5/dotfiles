@@ -118,11 +118,11 @@ function cfind {
 }
 
 function rs {
-   knife search node "role:*$1* AND chef_environment:*$2*" -c ~/.chef/knife-prod;
+   knife search node "role:*$1* AND chef_environment:*$2*" -c ~/.chef/knife-prod.rb;
 }
 
 function rsi {
-   knife search node "role:*$1* AND chef_environment:*$2*" -i -c ~/.chef/knife-prod;
+   knife search node "role:*$1* AND chef_environment:*$2*" -i -c ~/.chef/knife-prod.rb;
 }
 
 encForAllOps()
@@ -133,3 +133,4 @@ encForAllOps()
  
 alias gpgallops=encForAllOps
 
+My
