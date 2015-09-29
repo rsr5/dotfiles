@@ -132,5 +132,3 @@ encForAllOps()
  
  
 alias gpgallops=encForAllOps
-
-My
