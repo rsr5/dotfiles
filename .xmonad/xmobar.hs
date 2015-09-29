@@ -20,9 +20,10 @@ Config {
         Run Network "wlp3s0" ["-t","wlp3s0: <tx> <rx>","-H","200","-L","10","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 10,
         Run Network "enp0s25" ["-t","enp0s25: <tx> <rx>","-H","200","-L","10","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 10,
         Run Date "%a %b %_d %l:%M" "date" 10,
+        Run Com "/usr/bin/xmonad.get.volume" [] "myvolume" 1,
         Run StdinReader
     ],
     sepChar = "%",
     alignSep = "}{",
-    template = "%StdinReader% }{ %multicpu%   %memory%   %wlp3s0%   %enp0s25%   <fc=#FFFFCC>%date%</fc>   %KMSN%"
+    template = "%StdinReader% }{ Volume: <fc=#FFFFCC>%myvolume%</fc> %multicpu%   %memory%   %wlp3s0%   %enp0s25%   <fc=#FFFFCC>%date%</fc>   %KMSN%"
 }
