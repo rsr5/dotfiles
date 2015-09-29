@@ -293,29 +293,15 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = True
 
+
 myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
   [
-    -- mod-button1, Set the window to floating mode and move by dragging
-    ((modMask, button1),
-     (\w -> focus w >> mouseMoveWindow w))
-
-    -- mod-button2, Raise the window to the top of the stack
-    , ((modMask, button2),
-       (\w -> focus w >> windows W.swapMaster))
-
-    -- mod-button3, Set the window to floating mode and resize by dragging
-    , ((modMask, button3),
-       (\w -> focus w >> mouseResizeWindow w))
-
     -- Scroll wheel changes volume
-    , ((modMask, button4),
-       (spawn "amixer -D pulse sset Master 5%+"))
+    ((modMask , button4),
+       (\w -> spawn "amixer -D pulse sset Master 5%+"))
     , ((modMask, button5),
-       (spawn "amixer -D pulse sset Master 5%-"))
-
-    -- you may also bind events to the mouse scroll wheel (button4 and button5)
+       (\w -> spawn "amixer -D pulse sset Master 5%-"))
   ]
-
 
 ------------------------------------------------------------------------
 -- Status bars and logging
