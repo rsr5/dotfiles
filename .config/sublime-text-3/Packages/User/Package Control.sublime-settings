@@ -22,7 +22,8 @@
 		"SublimeLinter-flake8",
 		"SublimeLinter-shellcheck",
 		"Theme - Soda SolarizedDark",
-		"Tomorrow Color Schemes"
+		"Tomorrow Color Schemes",
+		"sublime-github"
 	],
 	"repositories":
 	[
