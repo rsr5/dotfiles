@@ -309,9 +309,9 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 
     -- Scroll wheel changes volume
     , ((modMask, button4),
-       spawn "amixer -D pulse sset Master 5%+")
+       (spawn "amixer -D pulse sset Master 5%+"))
     , ((modMask, button5),
-       spawn "amixer -D pulse sset Master 5%-")
+       (spawn "amixer -D pulse sset Master 5%-"))
 
     -- you may also bind events to the mouse scroll wheel (button4 and button5)
   ]
