@@ -34,7 +34,7 @@ myTerminal = "/usr/bin/urxvt256c-ml -e tmux"
 -- Workspaces
 -- The default number of workspaces (virtual screens) and their names.
 --
-myWorkspaces = ["1:Chrome","2:tmux","3:Sublime"] ++ map show [4..9]
+myWorkspaces = ["1:Chat", "2:Chrome", "3:tmux", "4:Sublime"] ++ map show [5..9]
 
 
 ------------------------------------------------------------------------
@@ -52,9 +52,9 @@ myWorkspaces = ["1:Chrome","2:tmux","3:Sublime"] ++ map show [4..9]
 -- 'className' and 'resource' are used below.
 --
 myManageHook = composeAll
-    [ className =? "chrome"         --> doShift "1:Chrome"
-    , className =? "urxvt256c-ml"   --> doShift "2:tmux"
-    , className =? "sublime_text"   --> doShift "3:Sublime"
+    [ className =? "Chrome"         --> doShift "2:Chrome"
+    , className =? "URxvt"          --> doShift "3:tmux"
+    , className =? "sublime_text"   --> doShift "4:Sublime"
     , resource  =? "desktop_window" --> doIgnore
     , className =? "Galculator"     --> doFloat
     , className =? "Gimp"           --> doFloat
