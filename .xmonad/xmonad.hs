@@ -301,7 +301,7 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
        (\w -> spawn "amixer -D pulse sset Master 5%+"))
     , ((modMask, button5),
        (\w -> spawn "amixer -D pulse sset Master 5%-"))
-    , ((modMask .|. shiftMask, button5),
+    , ((modMask .|. shiftMask, button4),
        (\w -> spawn "xbacklight + 5"))
     , ((modMask .|. shiftMask, button5),
        (\w -> spawn "xbacklight - 5"))
