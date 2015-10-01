@@ -4,6 +4,7 @@
 
 import System.IO
 import System.Exit
+import Data.List
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
@@ -52,9 +53,12 @@ myWorkspaces = ["1:Chat", "2:Chrome", "3:tmux", "4:Sublime"] ++ map show [5..9]
 -- 'className' and 'resource' are used below.
 --
 myManageHook = composeAll
-    [ className =? "Chrome"         --> doShift "2:Chrome"
+    [ title =? "DataSift Slack - Google Chrome" --> doShift "1:Chat"
+    , title =? "operations | DataSift Slack - Google Chrome" --> doShift "1:Chat"
+    , title =? "Inbox – robin.ridler@gmail.com - Google Chrome" --> doShift "1:Chat"
+    , className =? "Chrome"         --> doShift "2:Chrome"
     , className =? "URxvt"          --> doShift "3:tmux"
-    , className =? "sublime_text"   --> doShift "4:Sublime"
+    , className =? "Sublime_text"   --> doShift "4:Sublime"
     , resource  =? "desktop_window" --> doIgnore
     , className =? "Galculator"     --> doFloat
     , className =? "Gimp"           --> doFloat
