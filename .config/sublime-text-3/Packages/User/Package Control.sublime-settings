@@ -25,6 +25,7 @@
 		"Tomorrow Color Schemes",
 		"Github Tools"
 	],
+	"install_prereleases": ["SublimeCodeIntel"],
 	"repositories":
 	[
 		"https://github.com/theymaybecoders/sublime-tomorrow-theme.git"
