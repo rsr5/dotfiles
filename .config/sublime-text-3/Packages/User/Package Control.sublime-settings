@@ -15,12 +15,12 @@
 		"Pretty JSON",
 		"Pretty YAML",
 		"Revert All Files",
-		"RuboCop",
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"SublimeLinter-flake8",
 		"SublimeLinter-shellcheck",
+		"SublimeLinter-rubocop",
 		"Theme - Soda SolarizedDark",
 		"Tomorrow Color Schemes",
 		"Github Tools"
