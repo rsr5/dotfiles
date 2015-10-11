@@ -334,17 +334,19 @@ myStartupHook = return ()
 -- Run xmonad with all the defaults we set up.
 --
 main = do
-  xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmonad/xmobar.hs"
-  xmonad $ defaults {
-      logHook = dynamicLogWithPP $ xmobarPP {
-            ppOutput = hPutStrLn xmproc
-          , ppTitle = xmobarColor xmobarTitleColor "" . shorten 100
-          , ppCurrent = xmobarColor xmobarCurrentWorkspaceColor ""
-          , ppSep = "   "}
-      , manageHook = manageDocks <+> myManageHook
-      , startupHook = setWMName "LG3D"
-  }
-
+ xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmonad/xmobar.hs"
+ xmonad $ defaults  
+      { manageHook = manageDocks <+> manageHook defaultConfig  
+      , layoutHook = avoidStruts $ myLayouts
+      , logHook = dynamicLogWithPP xmobarPP  
+           { ppOutput = hPutStrLn xmproc  
+           , ppTitle = xmobarColor "#657b83" "" . shorten 100   
+           , ppCurrent = xmobarColor "#c0c0c0" "" . wrap "" ""
+           , ppSep     = xmobarColor "#c0c0c0" "" " | "
+           , ppUrgent  = xmobarColor "#ff69b4" ""
+           , ppLayout = const "" -- to disable the layout info on xmobar  
+           } 
+     } 
 
 ------------------------------------------------------------------------
 -- Combine it all together
