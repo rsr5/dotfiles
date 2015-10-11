@@ -10,7 +10,7 @@
 	{
 		"linux":
 		[
-			"/home/robin/.cabal/bin/"
+			"/home/robin/.cabal/bin/:/opt/chefdk/bin"
 		],
 		"osx":
 		[
