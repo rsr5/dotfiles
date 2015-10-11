@@ -13,9 +13,9 @@ Config {
     position = TopW C 100,
     lowerOnStart = True,
     commands = [
-        Run Weather "KMSN" ["-t","<tempF>F <skyCondition>","-L","64","-H","77","-n","#CEFFAC","-h","#FFB6B0","-l","#96CBFE"] 3600,
+        Run Weather "KMSN" ["-t"," <tempC>C","-L","64","-H","77","--normal","#657b83","--high","#657b83","--low","#657b83"] 3600,
         Run MultiCpu ["-t","Cpu: <autototal>","-L","30","-H","60","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC","-w","3"] 10,
-        Run Memory ["-t","Mem: <usedratio>%","-H","8192","-L","4096","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 10,
+        Run Memory ["-t","Mem: <usedratio>%"] 10,
         Run Swap ["-t","Swap: <usedratio>%","-H","1024","-L","512","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 10,
         Run Network "wlp6s0" ["-t","Wireless: <tx> <rx>","-H","200","-L","10","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 10,
         Run Network "enp0s20u2u1" ["-t","Wired: <tx> <rx>","-H","200","-L","10","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 10,
@@ -25,5 +25,5 @@ Config {
     ],
     sepChar = "%",
     alignSep = "}{",
-    template = "%StdinReader% }{ Volume: <fc=#FFFFCC>%myvolume%</fc> %multicpu%   %memory%   %wlp3s0%   %enp0s20u2u1%   <fc=#FFFFCC>%date%</fc>   %KMSN%"
+    template = "%StdinReader% }{ Volume: <fc=#93a1a1>%myvolume%</fc> %multicpu%   %memory%  <fc=#93a1a1>%date%</fc>   %KMSN%"
 }
