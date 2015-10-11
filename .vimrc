@@ -3,9 +3,9 @@
 execute pathogen#infect()
 
 " Enable syntax highlighting
-syntax on
+syntax enable
 set background=dark
-
+colorscheme solarized
 
 filetype plugin indent on
 
@@ -16,4 +16,3 @@ let g:pymode_folding = 0
 
 " Start on the first line of a git commit message
 autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
-
