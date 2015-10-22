@@ -6,7 +6,7 @@
 
 -- This is setup for dual 1920x1080 monitors
 Config {
-    font = "xft:Fixed-8",
+    font = "xft:Inconsolata for Powerline:regular:size=12",
     bgColor = "#002b36",
     fgColor = "#657b83",
 --    position = Static { xpos = 0, ypos = 0, width = 2560, height = 10 },
