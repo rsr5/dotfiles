@@ -12,6 +12,9 @@ filetype plugin indent on
 " Allow pasting in autoindent mode with F2
 set pastetoggle=<F2>
 
+" 80 char warning line
+:set colorcolumn=80
+
 let g:pymode_folding = 0
 
 " Syntastic settings
