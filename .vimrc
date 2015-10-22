@@ -15,6 +15,11 @@ set pastetoggle=<F2>
 " 80 char warning line
 :set colorcolumn=80
 
+" Sort out autoindent, do not use tabs
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
 let g:pymode_folding = 0
 
 " Syntastic settings
