@@ -34,7 +34,7 @@ let g:syntastic_check_on_wq = 0
 
 " Enable rubocop
 let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
-let g:syntastic_ruby_rubocop_exec = '/opt/chefdk/embedded/bin/rubocop'
+let g:syntastic_ruby_rubocop_exec = '/usr/bin/chefrubocop'
 
 " Start on the first line of a git commit message
 autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
