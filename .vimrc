@@ -50,5 +50,19 @@ imap <right> <nop>
 nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
+noremap <C-P> <Esc>:CtrlP /home/robin/code<CR>
+
 " Start on the first line of a git commit message
 autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
