@@ -36,5 +36,19 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
 let g:syntastic_ruby_rubocop_exec = '/usr/bin/chefrubocop'
 
+" Disable arrow keys 
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
+" Left/Right changes buffer
+nnoremap <left> :bp<CR>
+nnoremap <right> :bn<CR>
+
 " Start on the first line of a git commit message
 autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
