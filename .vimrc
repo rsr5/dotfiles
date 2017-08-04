@@ -66,3 +66,7 @@ noremap <C-P> <Esc>:CtrlP /home/robin/code<CR>
 
 " Start on the first line of a git commit message
 autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
+
+" Use jk instead of escape to leave insert mode
+inoremap jk <esc>
+inoremap <esc> <nop>
