@@ -1,0 +1,18 @@
+#!/bin/bash -xe
+
+mkdir -p ~/.vim/pack/git-plugins/start
+pushd ~/.vim/pack/git-plugins/start
+
+git clone https://github.com/w0rp/ale.git
+git clone https://github.com/junegunn/fzf.vim.git
+git clone https://github.com/fholgado/minibufexpl.vim
+git clone https://github.com/altercation/vim-colors-solarized.git
+git clone https://github.com/tpope/vim-fugitive.git
+git clone https://github.com/airblade/vim-gitgutter.git
+
+popd
+
+mkdir -p ~/.vim/pack/themes/opt
+pushd ~/.vim/pack/themes/opt
+
+git clone https://github.com/lifepillar/vim-solarized8.git

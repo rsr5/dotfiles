@@ -51,7 +51,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/opt/chefdk/bin/:/home/robin/scripts:/opt/curl/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/node-v0.10.30:/usr/local/go/bin:/home/robin/.cabal/bin:/opt/sublime_text_3/"
+export PATH="$PATH:/opt/chefdk/bin/:/home/robin/scripts:/opt/curl/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/node-v0.10.30:/usr/local/go/bin:/home/robin/.cabal/bin:/opt/sublime_text_3/"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -130,5 +130,15 @@ encForAllOps()
         gpg --output $1.pgp --encrypt --armour --recipient alex@mediasift.com --recipient robin.ridler@datasift.com --recipient gareth@datasift.com --recipient andrew.murphy@datasift.com --recipient marcin.cabaj@datasift.com --recipient stephen.brown@datasift.com --recipient alessio.martorelli@datasift.com $1
 }
  
- 
-alias gpgallops=encForAllOps
+alias isde-sol-stage='ssh roridler@umomz5014.us.oracle.com'
+alias isde-sol-uat='ssh roridler@umomz5013.us.oracle.com'
+alias isde-stage='ssh roridler@slce26vm299.us.oracle.com'
+alias isde-uat='ssh roridler@umomv4042.us.oracle.com'
+alias oras-stage='ssh roridler@umomz5005.us.oracle.com'
+alias oras-uat='ssh roridler@umomz5004.us.oracle.com'
+alias oras='ssh roridler@amogg0005.us.oracle.com'
+alias isde='ssh roridler@isde-x64-oel6-e.us.oracle.com'
+
+export TERM='xterm-256color'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
