@@ -84,3 +84,5 @@ let g:fzf_colors =
 nnoremap <C-p> :Files<CR>
 
 let g:gitgutter_realtime = 1
+
+set shell=/bin/zsh
