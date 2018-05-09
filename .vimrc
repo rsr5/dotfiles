@@ -86,3 +86,5 @@ nnoremap <C-p> :Files<CR>
 let g:gitgutter_realtime = 1
 
 set shell=/bin/zsh
+
+let g:airline_powerline_fonts=1
