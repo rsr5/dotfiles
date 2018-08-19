@@ -1,0 +1,10 @@
+music_directory		"~/music"
+playlist_directory      "~/.mpd/playlists"
+db_file                 "~/.mpd/tag_cache"
+log_file                "~/.mpd/mpd.log"
+pid_file                "~/.mpd/pid"
+
+audio_output {
+  type "pulse"
+  name "My Pulse Output"
+}
