@@ -1,0 +1,28 @@
+conky.config = {
+out_to_console = true,
+out_to_x = false,
+background = false,
+update_interval = 2,
+total_run_times = 0,
+use_spacer = 'none',
+};
+conky.text = [[
+^fn(Font Awesome 5 Free Solid)^fn() ^fg(\#ffffff)[${execi 60 /bin/countdown.py}]^fg() \
+^fn(Font Awesome 5 Free Solid)^fn() ^fg(\#ff0000)${tail /var/run/key_presses/today 1}^fg() \
+${if_match "${cpu cpu0}" <= "100"}^fg(\#ff0000)${endif}\
+${if_match "${cpu cpu0}" <= "70"}^fg(\#ffa500)${endif}\
+${if_match "${cpu cpu0}" <= "50"}^fg(\#00ff00)${endif}\
+^fn(Font Awesome 5 Free Solid)^fn() \
+${cpu cpu0}% \
+^fg()\
+${if_match "${battery_percent all}" <= "100"}^fg(\#00ff00)${endif}\
+${if_match "${battery_percent all}" <= "70"}^fg(\#ffa500)${endif}\
+${if_match "${battery_percent all}" <= "40"}^fg(\#ff0000)${endif}\
+^fn(Font Awesome 5 Free Solid)^fn() ${battery_percent all}% \
+^fg()\
+^fn(Font Awesome 5 Free Solid)^fn() ${acpitemp}c \
+^fn(Font Awesome 5 Free Solid)^fn() ${loadavg 2 3} \
+^fn(Font Awesome 5 Free Solid)^fn() $memperc% ($mem) \
+^fn(Font Awesome 5 Free Solid)^fn() ${downspeed enp0s25} ${upspeed enp0s25} \
+^fn(Font Awesome 5 Free Solid)^fn() ^fg(\#ffffff)${time %a %b %d %I:%M%P %Z}^fg()
+]];
