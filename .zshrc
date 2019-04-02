@@ -51,10 +51,12 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-PATH="/bin:/usr/bin:/sbin:/usr/sbin"
+PATH="/opt/firefox/"
 PATH="$PATH:$HOME/code/Dockerfiles/bin"
 PATH="$PATH:$HOME/.local/vim/bin"
+PATH="$PATH:/bin:/usr/bin:/sbin:/usr/sbin"
 PATH="$PATH:$HOME/scripts"
+PATH="$PATH:$HOME/.cargo/bin"
 export PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
