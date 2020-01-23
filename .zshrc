@@ -89,6 +89,7 @@ export SHELL="/usr/bin/zsh"
 alias pstop="kill -STOP"
 alias prun="kill -CONT"
 alias jjq="jq"
+alias vi=vim
 
 export LESSOPEN="| source-highlight -f esc -s bash -oSTDOUT -i %s"
 export LESS=" -R"
