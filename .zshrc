@@ -55,6 +55,7 @@ PATH="/opt/firefox/"
 PATH="$PATH:$HOME/code/Dockerfiles/bin"
 PATH="$PATH:$HOME/.local/vim/bin"
 PATH="$PATH:/bin:/usr/bin:/sbin:/usr/sbin"
+PATH="$PATH:/usr/local/bin"
 PATH="$PATH:$HOME/scripts"
 PATH="$PATH:$HOME/.cargo/bin"
 export PATH
